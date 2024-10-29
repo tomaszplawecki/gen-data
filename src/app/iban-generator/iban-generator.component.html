@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">IBAN</h5>
+    <p class="card-text">
+      Generator IBAN może być użyty w różnych aplikacjach finansowych, testowych
+      oraz edukacyjnych, gdzie potrzebne są losowe numery kont bankowych do
+      symulacji i testów.
+    </p>
+    <div class="d-flex gap-2 mb-2">
+      <button type="button" class="btn btn-primary" (click)="generateIban()">
+        Wygeneruj
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="generateIban(true)"
+      >
+        Wygeneruj i skopiuj
+      </button>
+    </div>
+    <input
+      class="form-control"
+      type="text"
+      id="generated-pesel-field"
+      [value]="generatedIban()"
+    />
+  </div>
+</div>

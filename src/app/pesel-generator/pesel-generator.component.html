@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">PESEL</h5>
+    <p class="card-text">
+      PESEL to polski numer identyfikacyjny, zawierający datę urodzenia, płeć i
+      unikalny numer seryjny. Generator PESEL tworzy poprawne numery zgodne z
+      wymaganymi regułami formatu.
+    </p>
+    <div class="d-flex gap-2 mb-2">
+      <button type="button" class="btn btn-primary" (click)="generatePesel()">
+        Wygeneruj
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="generatePesel(true)"
+      >
+        Wygeneruj i skopiuj
+      </button>
+    </div>
+    <input class="form-control" type="text" id="generated-pesel-field" [value]="generatedPesel()" />
+  </div>
+</div>

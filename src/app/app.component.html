@@ -1,1 +1,71 @@
-<app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
+<header class="bg-primary text-white py-0">
+  <div class="container">
+    <img src="/assets/logo.webp" alt="Dev Helpers Logo" style="height: 100px" />
+    @if(false) {
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Dev Helpers</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">O nas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Usługi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    }
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container my-5">
+  <div class="row">
+    <div class="col-12">
+      <p>
+        Dev Helpers oferuje wiele narzędzi i komponentów, które ułatwiają
+        tworzenie responsywnych i estetycznych stron internetowych.
+      </p>
+    </div>
+    <div class="col-12 col-md-6">
+      <app-pesel-generator />
+    </div>
+    <div class="col-12 col-md-6">
+      <app-iban-generator />
+    </div>
+    <div class="col-12">
+      <router-outlet />
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-0">© 2024 Dev Helpers. Wszelkie prawa zastrzeżone.</p>
+      </div>
+    </div>
+  </div>
+</footer>
